@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Width Indicator</title>
+
+	<style>
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.width-indicator {
+		    width: 300px;
+		    background: lightcoral;
+		    text-align: center;
+		    padding: 20px;
+		    font-size: 20px;
+		    border-radius: 12px;
+		    font-family: system-ui;
+		    margin: 200px auto 0;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!-- Width Indicator -->
+ 	<div class="width-indicator">
+		<p>The width of window is: <span id="width"> 0 </span> px</p>
+ 	</div>
+
+ 	<!-- Width Indication JS -->
+ 	<script>
+ 		const widthOutput = document.querySelector('#width');
+
+		function reportWindowSize() {
+		  widthOutput.textContent = window.innerWidth;
+		}
+
+		window.onresize = reportWindowSize;
+ 	</script>
+ 	
+</body>
+</html>
